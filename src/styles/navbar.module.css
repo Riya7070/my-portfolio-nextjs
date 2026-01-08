@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 14px 30px;
+  border-radius: 40px;
+  display: flex;
+  gap: 40px;
+  z-index: 100;
+}
+
+.links a {
+  margin: 0 12px;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #020e13;
+}
+
+.logo {
+  font-weight: bold;
+  color: #03080a;
+}

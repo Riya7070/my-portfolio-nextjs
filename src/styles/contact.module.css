@@ -1,0 +1,105 @@
+.section {
+  padding: 120px 80px;
+  background: radial-gradient(circle at top, #0b1020, #050812);
+  color: #ffffff;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  text-align: center;
+  color: #cbd5f5;
+  margin-bottom: 80px;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* Left info */
+.info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.info span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.info a {
+  color: #6c7cff;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form input,
+.form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #6c7cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background: #5563ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .form button {
+    font-size: 0.95rem;
+  }
+}

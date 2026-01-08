@@ -1,0 +1,120 @@
+.section {
+  padding: 120px 100px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 80px;
+  letter-spacing: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+.image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 24px;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 0.95rem;
+  color: #cbd5f0;
+  line-height: 1.6;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.95),
+    transparent
+  );
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.buttons a {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  background: #6c64d7;
+  color: #0f172a;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech span {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .image {
+    height: 160px;
+  }
+}
